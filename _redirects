@@ -1,0 +1,10 @@
+# _redirects
+
+# Redirect from /old-url to /new-url
+/index.html  /
+
+# Redirect from /another-old-url to /yet-another-new-url
+/resume.html  /resume
+
+# Rewrite /not-a-real-url to serve /index.html
+/not-a-real-url  /  200
