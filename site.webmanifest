@@ -1,0 +1,14 @@
+{
+    "name": "Leo Craig - Interactive Resume",
+    "short_name": "Leo Craig - Interactive Resume",
+    "icons": [
+        {
+            "src": "/assets/imgs/uom.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
