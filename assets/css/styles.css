@@ -218,11 +218,11 @@ canvas {
     transition-delay: 350ms;
 }
 .logo:nth-child(7) {
-    transition-delay: 400ms;
+    transition-delay: 250ms;
 } 
 .logo:nth-child(8) {
-    transition-delay: 450ms;
+    transition-delay: 300ms;
 } 
 .logo:nth-child(9) {
-    transition-delay: 500ms;
+    transition-delay: 350ms;
 } 
