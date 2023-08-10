@@ -69,9 +69,7 @@ header nav a:hover {
 /* Landing Page */
 
 #landing-page {
-  position: relative;
-  align-items: center;
-  justify-content: center;
+  margin:auto;
 }
 section .title-box {
   position: absolute;
