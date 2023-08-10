@@ -16,7 +16,8 @@ html {
   height: 100%;
 }
 body {
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: 100%;
 }
 h1 {
@@ -69,6 +70,7 @@ header nav a:hover {
 /* Landing Page */
 
 #landing-page {
+  overflow: hidden;
   margin:auto;
 }
 section .title-box {
