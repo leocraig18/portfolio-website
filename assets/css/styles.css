@@ -11,15 +11,8 @@ body,
   line-height: 25px;
   letter-spacing: 0.8px;
 }
-html {
-  overflow: hidden;
-  height: 100%;
-}
-body {
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 100%;
-}
+
+
 h1 {
   font-family: Garamond, Baskerville, Baskerville Old Face, Hoefler Text,
     Times New Roman, serif !important;
