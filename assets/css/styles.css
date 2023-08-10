@@ -11,8 +11,6 @@ body,
   line-height: 25px;
   letter-spacing: 0.8px;
 }
-
-
 h1 {
   font-family: Garamond, Baskerville, Baskerville Old Face, Hoefler Text,
     Times New Roman, serif !important;
@@ -63,9 +61,10 @@ header nav a:hover {
 /* Landing Page */
 
 #landing-page {
+  width: 100% !important;
   position: relative;
-  overflow-x: hidden;
-  margin:auto;
+  align-items: center;
+  justify-content: center;
 }
 section .title-box {
   position: absolute;
