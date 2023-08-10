@@ -70,7 +70,8 @@ header nav a:hover {
 /* Landing Page */
 
 #landing-page {
-  overflow: hidden;
+  position: relative;
+  overflow-x: hidden;
   margin:auto;
 }
 section .title-box {
