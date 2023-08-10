@@ -11,6 +11,14 @@ body,
   line-height: 25px;
   letter-spacing: 0.8px;
 }
+html {
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  overflow: auto;
+  height:100%;
+}
 h1 {
   font-family: Garamond, Baskerville, Baskerville Old Face, Hoefler Text,
     Times New Roman, serif !important;
@@ -193,10 +201,10 @@ canvas {
   transition-delay: 100ms;
 }
 .link-icons:nth-child(2) {
-  transition-delay: 200ms;
+  transition-delay: 300ms;
 }
 .link-icons:nth-child(3) {
-  transition-delay: 300ms;
+  transition-delay: 500ms;
 }
 
 .logo:nth-child(1) {
@@ -224,5 +232,8 @@ canvas {
     transition-delay: 300ms;
 } 
 .logo:nth-child(9) {
+    transition-delay: 350ms;
+} 
+.logo:nth-child(10) {
     transition-delay: 350ms;
 } 
