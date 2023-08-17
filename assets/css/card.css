@@ -1,0 +1,492 @@
+:root {
+  --background-rgb: 29 30 34;
+  
+  --blue-rgb: 33 150 243;
+  --primary-rgb: var(--blue-rgb);
+  
+  --blob-color-1: rgb(var(--blue-rgb));
+  --blob-color-2: dodgerblue;
+    --python-rgb: 53 114 165; /* Blueish */
+    --javascript-rgb: 240 219 79; /* Yellowish */
+    --react-rgb: 97 218 251; /* Light Blue */
+    --redux-rgb: 118 74 188; /* Purple */
+    --html5-rgb: 227 79 38; /* Orange */
+    --css3-rgb: 21 114 182; /* Bluish */
+    --postgresql-rgb: 51 103 145; /* Bluish */
+    --r-rgb: 25 158 199; /* Sky Blue */
+    --git-rgb: 240 80 50; /* Reddish */
+    --excel-rgb: 52 151 53; /* Green */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.screen {
+  display: flex;
+  /* border: 3px solid rgb(var(--primary-rgb) / 80%); */
+  border-radius: 1rem;
+  /* background-color: rgb(var(--primary-rgb) / 15%); */
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  height:90%;
+    aspect-ratio: 10 / 12;
+}
+/* Styling for Python */
+.screen.python {
+  border: 3px solid rgb(var(--python-rgb) / 80%);
+  background-color: rgb(var(--python-rgb) / 15%);
+}
+/* Styling for-javascript */
+.screen.javascript {
+  border: 3px solid rgb(var(--javascript-rgb) / 80%);
+  background-color: rgb(var(--javascript-rgb) / 15%);
+}
+/* Styling for-javascript */
+.screen.react {
+  border: 3px solid rgb(var(--react-rgb) / 80%);
+  background-color: rgb(var(--react-rgb) / 15%);
+}
+/* Styling for-redux */
+.screen.redux {
+  border: 3px solid rgb(var(--redux-rgb) / 80%);
+  background-color: rgb(var(--redux-rgb) / 15%);
+}
+/* Styling for-html5 */
+.screen.html5 {
+  border: 3px solid rgb(var(--html5-rgb) / 80%);
+  background-color: rgb(var(--html5-rgb) / 15%);
+}
+/* Styling for-css3 */
+.screen.css3 {
+  border: 3px solid rgb(var(--css3-rgb) / 80%);
+  background-color: rgb(var(--css3-rgb) / 15%);
+}
+/* Styling for-postgresql */
+.screen.postgresql {
+  border: 3px solid rgb(var(--postgresql-rgb) / 80%);
+  background-color: rgb(var(--postgresql-rgb) / 15%);
+}
+/* Styling for-r */
+.screen.r {
+  border: 3px solid rgb(var(--r-rgb) / 80%);
+  background-color: rgb(var(--r-rgb) / 15%);
+}
+/* Styling for-git */
+.screen.git {
+  border: 3px solid rgb(var(--git-rgb) / 80%);
+  background-color: rgb(var(--git-rgb) / 15%);
+}
+/* Styling for-excel */
+.screen.excel {
+  border: 3px solid rgb(var(--excel-rgb) / 80%);
+  background-color: rgb(var(--excel-rgb) / 15%);
+}
+
+
+.screen:after,
+.screen:before {
+  content: "";
+  height: 5px;
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  translate: -50% 0%;
+  background-color: white;
+}
+
+.screen:before {
+  width: 15%;
+  top: 0rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.screen:after {
+  width: 25%;
+  bottom: 0rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+@keyframes pan-overlay {
+  from {
+    background-position: 0% 0%;
+  }
+  
+  to {
+    background-position: 0% -100%;
+  }
+}
+
+.screen-overlay {
+  height: 100%;
+  width: 100%;
+  animation: pan-overlay 22s infinite linear;
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+}
+/* Styling overlay for Python */
+.screen-overlay.python {
+  background:
+linear-gradient(
+rgb(var(--python-rgb) / 0.15),
+rgb(var(--python-rgb) / 0.15) 3px,
+transparent 3px,
+transparent 9px
+);
+  background-size: 100% 9px;
+}
+
+/* Styling overlay for JavaScript */
+.screen-overlay.javascript {
+background: linear-gradient(
+rgb(var(--javascript-rgb) / 0.15),
+rgb(var(--javascript-rgb) / 0.15) 3px,
+transparent 3px,
+transparent 9px
+);
+  background-size: 100% 9px;
+}
+
+/* Styling overlay for React */
+.screen-overlay.react {
+background: linear-gradient(
+rgb(var(--react-rgb) / 0.15),
+rgb(var(--react-rgb) / 0.15) 3px,
+transparent 3px,
+transparent 9px
+);
+  background-size: 100% 9px;
+}
+
+/* Styling overlay for Redux */
+.screen-overlay.redux {
+background: linear-gradient(
+rgb(var(--redux-rgb) / 0.15),
+rgb(var(--redux-rgb) / 0.15) 3px,
+transparent 3px,
+transparent 9px
+);
+  background-size: 100% 9px;
+}
+
+/* Styling overlay for HTML5 */
+.screen-overlay.html5 {
+background: linear-gradient(
+rgb(var(--html5-rgb) / 0.15),
+rgb(var(--html5-rgb) / 0.15) 3px,
+transparent 3px,
+transparent 9px
+);
+  background-size: 100% 9px;
+}
+
+/* Styling overlay for CSS3 */
+.screen-overlay.css3 {
+background: linear-gradient(
+rgb(var(--css3-rgb) / 0.15),
+rgb(var(--css3-rgb) / 0.15) 3px,
+transparent 3px,
+transparent 9px
+);
+  background-size: 100% 9px;
+}
+
+/* Styling overlay for PostgreSQL */
+.screen-overlay.postgresql {
+background: linear-gradient(
+rgb(var(--postgresql-rgb) / 0.15),
+rgb(var(--postgresql-rgb) / 0.15) 3px,
+transparent 3px,
+transparent 9px
+);
+  background-size: 100% 9px;
+}
+
+
+.screen-overlay.r {
+background: linear-gradient(
+rgb(var(--r-rgb) / 0.15),
+rgb(var(--r-rgb) / 0.15) 3px,
+transparent 3px,
+transparent 9px
+);
+  background-size: 100% 9px;
+}
+
+/* Styling overlay for Git */
+.screen-overlay.git {
+background: linear-gradient(
+rgb(var(--git-rgb) / 0.15),
+rgb(var(--git-rgb) / 0.15) 3px,
+transparent 3px,
+transparent 9px
+);
+  background-size: 100% 9px;
+}
+
+/* Styling overlay for Excel */
+.screen-overlay.excel {
+background: linear-gradient(
+rgb(var(--excel-rgb) / 0.15),
+rgb(var(--excel-rgb) / 0.15) 3px,
+transparent 3px,
+transparent 9px
+);
+  background-size: 100% 9px;
+}
+@keyframes pan-image {  
+  0% {
+    background-position: 36% 42%;
+    background-size: 200%;
+  }
+  
+  20% {
+    background-position: 30% 35%;
+    background-size: 200%;
+  }
+  
+  20.0001% { /* -- View 2 -- */
+    background-position: 60% 85%;
+    background-size: 500%;
+  }
+  
+  40% {
+    background-position: 49% 81%;
+    background-size: 500%;
+  }
+  
+  40.0001% { /* -- View 3 -- */
+    background-position: 80% 42%;
+    background-size: 300%;
+  }
+  
+  60% {
+    background-position: 84% 33%;
+    background-size: 300%;
+  }
+  
+  60.0001% { /* -- View 4 -- */
+    background-position: 0% 0%;
+    background-size: 300%;
+  }
+  
+  80% {
+    background-position: 15% 4%;
+    background-size: 300%;
+  }
+  
+  80.0001% { /* -- View 5 -- */
+    background-position: 80% 10%;
+    background-size: 300%;
+  }
+  
+  100% {
+    background-position: 72% 14%;
+    background-size: 300%;
+  }
+}
+
+.screen > .screen-image {
+  background-image: url("/assets/imgs/code.webp");
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  background-size: 300%;
+  background-position: 0% 0%;
+  filter: sepia(100%) hue-rotate(160deg);
+  opacity: 0.6;
+  animation: pan-image 15s linear infinite;
+}
+
+.screen > .screen-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 3;
+  margin: 1rem;
+  border-radius: 0.6rem;
+}
+.screen.python > .screen-content {
+  border: 1px solid rgb(var(--python-rgb) / 50%);
+}
+
+.screen.javascript > .screen-content {
+  border: 1px solid rgb(var(--javascript-rgb) / 50%);
+}
+
+.screen.react > .screen-content {
+  border: 1px solid rgb(var(--react-rgb) / 50%);
+}
+
+.screen.redux > .screen-content {
+  border: 1px solid rgb(var(--redux-rgb) / 50%);
+}
+
+.screen.html5 > .screen-content {
+  border: 1px solid rgb(var(--html5-rgb) / 50%);
+}
+
+.screen.css3 > .screen-content {
+  border: 1px solid rgb(var(--css3-rgb) / 50%);
+}
+
+.screen.postgresql > .screen-content {
+  border: 1px solid rgb(var(--postgresql-rgb) / 50%);
+}
+
+.screen.r > .screen-content {
+  border: 1px solid rgb(var(--r-rgb) / 50%);
+}
+
+.screen.git > .screen-content {
+  border: 1px solid rgb(var(--git-rgb) / 50%);
+}
+
+.screen.excel > .screen-content {
+  border: 1px solid rgb(var(--excel-rgb) / 50%);
+}
+.screen > .screen-content > img {
+    width:150px;
+    height:auto;
+    margin-bottom:1rem;
+    
+}
+
+.screen > .screen-content > .screen-user{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.screen > .screen-content > .screen-user:before,
+.screen > .screen-content > .screen-user:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  border-radius: 1rem;
+}
+.screen.python > .screen-content > .screen-user:before,
+.screen.python > .screen-content > .screen-user:after {
+  background-color: rgb(var(--python-rgb));
+  box-shadow: 0px 0px 8px 3px rgb(var(--python-rgb) / 60%);
+}
+
+.screen.javascript > .screen-content > .screen-user:before,
+.screen.javascript > .screen-content > .screen-user:after {
+  background-color: rgb(var(--javascript-rgb));
+  box-shadow: 0px 0px 8px 3px rgb(var(--javascript-rgb) / 60%);
+}
+
+.screen.react > .screen-content > .screen-user:before,
+.screen.react > .screen-content > .screen-user:after {
+  background-color: rgb(var(--react-rgb));
+  box-shadow: 0px 0px 8px 3px rgb(var(--react-rgb) / 60%);
+}
+
+.screen.redux > .screen-content > .screen-user:before,
+.screen.redux > .screen-content > .screen-user:after {
+  background-color: rgb(var(--redux-rgb));
+  box-shadow: 0px 0px 8px 3px rgb(var(--redux-rgb) / 60%);
+}
+
+.screen.html5 > .screen-content > .screen-user:before,
+.screen.html5 > .screen-content > .screen-user:after {
+  background-color: rgb(var(--html5-rgb));
+  box-shadow: 0px 0px 8px 3px rgb(var(--html5-rgb) / 60%);
+}
+
+.screen.css3 > .screen-content > .screen-user:before,
+.screen.css3 > .screen-content > .screen-user:after {
+  background-color: rgb(var(--css3-rgb));
+  box-shadow: 0px 0px 8px 3px rgb(var(--css3-rgb) / 60%);
+}
+
+.screen.postgresql > .screen-content > .screen-user:before,
+.screen.postgresql > .screen-content > .screen-user:after {
+  background-color: rgb(var(--postgresql-rgb));
+  box-shadow: 0px 0px 8px 3px rgb(var(--postgresql-rgb) / 60%);
+}
+
+.screen.r > .screen-content > .screen-user:before,
+.screen.r > .screen-content > .screen-user:after {
+  background-color: rgb(var(--r-rgb));
+  box-shadow: 0px 0px 8px 3px rgb(var(--r-lang-rgb) / 60%);
+}
+
+.screen.git > .screen-content > .screen-user:before,
+.screen.git > .screen-content > .screen-user:after {
+  background-color: rgb(var(--git-rgb));
+  box-shadow: 0px 0px 8px 3px rgb(var(--git-rgb) / 60%);
+}
+
+.screen.excel > .screen-content > .screen-user:before,
+.screen.excel > .screen-content > .screen-user:after {
+  background-color: rgb(var(--excel-rgb));
+  box-shadow: 0px 0px 8px 3px rgb(var(--excel-rgb) / 60%);
+}
+
+.screen > .screen-content > .screen-user:before {
+  height: 2px;
+  width: 50px;
+  translate: 20px -1rem;
+  opacity: 0.75;
+}
+
+.screen > .screen-content > .screen-user:after {
+  height: 3px;
+  width: 30px;
+  translate: 70px calc(-1rem - 0.5px);
+}
+
+.screen > .screen-content > .screen-user > :is(.name, .link) {
+  font-family: "Source Code Pro", monospace;
+  color: white; 
+  text-align: center;
+  text-transform: uppercase; 
+}
+
+.screen > .screen-content > .screen-user > .name {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.screen > .screen-content > .screen-user > .name:before,
+.screen > .screen-content > .screen-user > .name:after {
+  content: "";
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+.screen > .screen-content > .screen-user > .name:before {
+  top: 55%;
+  right: -1.5rem;
+}
+
+.screen > .screen-content > .screen-user > .name:after {
+  top: 45%;
+  left: -1.5rem;  
+}
+
+@media(max-width: 700px) {
+  .screen {
+    scale: 1;
+    margin-bottom: 0rem;
+  }
+}
