@@ -24,12 +24,9 @@
 
 .screen {
   display: flex;
-  /* border: 3px solid rgb(var(--primary-rgb) / 80%); */
   border-radius: 1rem;
-  /* background-color: rgb(var(--primary-rgb) / 15%); */
   overflow: hidden;
   position: relative;
-  z-index: 10;
   height:90%;
     aspect-ratio: 10 / 12;
 }
